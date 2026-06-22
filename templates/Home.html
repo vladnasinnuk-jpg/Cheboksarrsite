@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W</title>
+    <link rel="stylesheet" href="Home-style.css">
+</head>
+<body>
+    <header>
+        <div class="Name-and-logo">
+            <img src="/static/pictures/logo.png" class="logo">
+            <h2 class="page-name">Відділ W</h2>
+        </div>
+        <div class="find-user-header">
+            <input class="find-user-input" type="text" placeholder="   Ім'я користувача">
+            <button class="find-user-button">Знайти</button>
+            <button class="filter-user-button">Фильтр
+                <form class="find-window">
+                    <input name="first_name-filter" class="first_name-filter" type="text" placeholder="   Ім'я">
+                    <input name="second_name-filter" type="text" placeholder="   Призвіще">
+                    <input name="age-filter" type="text" placeholder="   Років">
+                    <input name="phone-filter" type="text" placeholder="   Телефон">
+                    <input name="salary-filter" type="text" placeholder="   Зарплата">
+                    <input name="status-filter" type="text" placeholder="   Статус">
+                </form>
+            </button>
+        </div>
+        <div class="user-info-header">
+            <img src="/static/pictures/Without-avatar.png" class="avatar-in-header">
+            <h2 class="name-in-header">First_name Second_name</h2>
+            <div class="stettings-header">
+                <img src="/static/pictures/stettings.png" class="stettings-ikon">
+                <form class="stettings-window">
+                    <div class="stettings-theme">
+                        <input type="radio" name="theme" value="light">
+                        <span>Світла тема</span>
+                    </div>
+                    <div class="stettings-theme">
+                        <input type="radio" name="theme" value="dark">
+                        <span>Темна тема</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav class="navigation">
+        <button id="button-to-information">Головна</button>
+        <button id="button-to-profile">Профіль</button>
+        <button id="button-to-documents">Папери</button>
+        <button id="button-to-find-users">Користувачі</button>
+        <button id="button-to-chats">Чат</button>
+    </nav>
+    <main id="app">
+
+    </main>
+    <footer>
+        <div class="footer-div">
+            <img src="/static/pictures/telegram_ikon.png" class="footer-ikon">
+            <a href="" class="footer-contacts">Наш телеграм</a>
+        </div>
+        <div class="footer-div">
+            <img src="/static/pictures/instagram_ikon.png" class="footer-ikon">
+            <a href="" class="footer-contacts" >Наш інстаграм</a>
+        </div>
+        <div class="footer-div">
+            <img src="/static/pictures/facebook_ikon.png" class="footer-ikon">
+            <a href="" class="footer-contacts" >Наш фейсбук</a>
+        </div>
+    </footer>
+    <script src="Home.js " type="module"></script>
+</body>
+</html>

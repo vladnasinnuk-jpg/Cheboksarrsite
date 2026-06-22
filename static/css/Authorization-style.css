@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito-VariableFont_wght';
+
+}
+@font-face {
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('/static/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+body,header,main,footer{
+    display: flex;
+    align-items: center;
+}
+body,header,main{
+    flex-direction: column;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(201, 201, 201);
+}
+header{
+    gap: 14px;
+    padding: 10px 0px 10px 0px;
+}
+
+footer{
+    margin-top: auto;
+    gap: 10px;
+    
+}
+
+footer a{
+    color: rgb(95, 95, 95);
+}
+footer a:hover{
+    color: rgb(255, 255, 255);
+}
+.logo{
+    width: 220px;
+    height: 125px;
+}
+.Info-authorization{
+    width: 80vh;
+    padding-left: 40px;
+}
+.authorization{
+    width: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0px 20px 0px;
+    background-color: rgb(181, 181, 181);
+}
+.input-authorization{
+    width: 80%;
+    height: 30px;
+    border: 1px solid rgb(62, 61, 61);
+}
+.button-authorization{
+    width: 80%;
+    height: 30px;
+    background-color: rgb(103, 186, 106);
+}
+.button-authorization:hover{
+    background-color: rgb(255, 255, 255);
+}
+.button-authorization:active{
+    background-color: rgb(218, 218, 218);
+}
+.text-for-authorization, .error-message{
+    width: 80%;
+    margin-bottom: 10px;
+}
+.error-message{
+    color: rgb(243, 0, 0);
+    text-align: center;
+    font-size: 18px;
+}
+
+.google-ikon{
+    width: 40px;
+    height: 40px;
+}
+@media (max-width: 768px){
+    .logo{
+        width: 200px;
+        height: 120px;
+    }
+        .page-name{
+        font-size: 22px;
+    }
+    .Info-authorization{
+        font-size: 18px;
+        width: 64vh;
+        padding-left: 10px;
+    }
+    .authorization{
+        width: 56vh;
+    }
+    .text-for-authorization{
+        font-size: 16px;
+    }
+    .google-ikon{
+        width: 50px;
+        height: 50px;
+    }
+    footer a{
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 480px){
+    .logo{
+        width: 180px;
+        height: 105px;
+    }
+    .page-name{
+        font-size: 21px;
+    }
+    .Info-authorization{
+        font-size: 17px;
+        width: 54vh;
+    }
+    .authorization{
+        width: 48vh;
+        margin-top: 30px;
+    }
+    .text-for-authorization{
+        font-size: 15px;
+    }
+    .google-ikon{
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito-VariableFont_wght';
+
+}
+@font-face {
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('/static/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+body,header,main,footer,nav{
+    display: flex;
+    align-items: center;
+}
+body,header,main{
+    flex-direction: column;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(201, 201, 201);
+        max-width: 100%;
+    overflow-x: hidden; 
+}
+header{
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+nav{
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+nav > button{
+    width: 160px;
+    height: 32px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 4px;
+}
+nav > button:hover{
+    background-color: rgb(122, 212, 125);
+    cursor: pointer;
+}
+nav > button:active{
+    background-color: rgb(103, 186, 106);
+}
+
+main{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px 10px 0px;
+}
+footer{
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0px 10px 0px;
+}
+footer > div > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+footer > div > a:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+
+.Name-and-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.logo{
+    width: 120px;
+    height: 80px;
+}
+.page-name{
+    font-size: 20px;
+}
+
+.find-user-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.find-user-input{
+    width: 200px;
+    height: 34px;
+    background-color: rgb(255, 255, 255);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.find-user-button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 6px;
+}
+.find-user-button:hover{
+    background-color: rgb(122, 212, 125);
+    cursor: pointer;
+}
+.find-user-button:active{
+    background-color: rgb(103, 186, 106);
+}
+.filter-user-button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 6px;
+}
+.filter-user-button:hover{
+    background-color: rgb(122, 212, 125);
+    cursor: pointer;
+}
+.filter-user-button:hover .find-window{
+    display: flex;
+}
+.filter-user-button:active{
+    background-color: rgb(103, 186, 106);
+}
+.find-window{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    padding: 10px;
+    z-index: 67;
+}
+.find-window > input{
+    width: 160px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.active{
+    display: flex;
+}
+.user-info-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.avatar-in-header{
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+}
+.name-in-header{
+    font-size: 16px;
+}
+.stettings-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.stettings-ikon{
+    width: 50px;
+}
+.stettings-header:hover{
+    cursor: pointer;
+}
+.stettings-header:hover .stettings-window{
+    display: flex;
+}
+/*-------------------------------------------*/
+.stettings-window{
+    width: 160px;
+    height: 70px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    z-index: 67;
+    right: 0;
+    top: 40px;
+}
+.stettings-theme{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.active-settings{
+    display: flex;
+}
+.stettings-ikon{
+    width: 40px;
+    height: 40px;
+}
+.stettings-window > button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+
+
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.footer-ikon{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.content{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px 10px 0px;
+}
+.content-img{
+    width: 500px;
+    height: 300px;
+}
+.post-topic{
+    font-size: 20px;
+}
+.content-text{
+    font-size: 18px;
+}
+.content-publicated{
+    font-size: 16px;
+}
+
+
+.profile{
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    padding: 10px 0px 10px 0px;
+}
+.profile-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+}
+.profile-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.profile-field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.profile-field > p{
+    font-size: 18px;
+}
+.profile-field > input{
+    width: 200px;
+    height: 26px;
+    background-color: rgb(255, 255, 255);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.profile-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.profile-buttons > button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.submit:hover{
+    background-color: rgb(101, 255, 116);
+}
+.submit:active{
+    background-color: rgb(68, 255, 86);
+    cursor: pointer;
+}
+.reject:hover{
+    background-color: rgb(255, 110, 110);
+    cursor: pointer;
+}
+.reject:active{
+    background-color: rgb(255, 80, 80);
+}
+.write-user{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.write-user:hover{
+    background-color: rgb(101, 255, 116);
+}
+.write-user:active{
+    background-color: rgb(68, 255, 86);
+    cursor: pointer;
+}
+
+.All-documents{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+.document{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0px 10px 0px;
+}
+.document-img{
+    width: 300px;
+    height: auto;
+}
+.document-description{
+    font-size: 14px;
+}
+.document-uploaded{
+    font-size: 10px;
+}
+
+
+
+.All-users{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+    gap: 20px;
+}
+.show-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(188, 188, 188);
+    padding: 10px;
+    gap: 10px;
+}
+.show-user:hover{
+    background-color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+.show-user:active{
+    background-color: rgb(137, 137, 137);
+}
+.user-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+}
+.name-and-sername{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+.name-and-sername > p{
+    font-size: 16px;
+}
+
+
+
+.curren-chat{
+    height: 500px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.messageS{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: rgb(204, 204, 204);
+    gap: 20px;
+}
+.messageS > p{
+    font-size: 16px;
+}
+.message{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.my-message {
+    justify-content: flex-end;
+}
+.border{
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 216, 216);
+    color : rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 6px;
+}
+.message-text{
+    word-break: break-word;
+}
+.message-time{
+    font-size: 10px;
+}
+.wruper-message{
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+.message-input{
+    width: 100%;
+    height: 34px;
+    background-color: rgb(255, 255, 255);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.send-message{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(103, 186, 106);
+    color : rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.send-message:hover{
+    background-color: rgb(122, 212, 125);
+}
+.send-message:active{
+    background-color: rgb(103, 186, 106);
+}
+
+
+
+
+.chats_and_current-chat{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    padding: 10px 0px 10px 0px;
+}
+.Allchats{
+    width: 20vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: absolute;
+    background-color: rgb(187, 187, 187);
+    padding: 10px 0px 10px 0px;
+    left: 50vw;
+}
+.chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+}
+.chat:hover{
+    background-color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+.chat:active{
+    background-color: rgb(137, 137, 137);
+}
+.avatar-in-chat{
+    width: 67px;
+    height: 67px;
+    border-radius: 5%;
+}
+.user-name-and-sername{
+    display: flex;
+    flex-direction: row;
+}
