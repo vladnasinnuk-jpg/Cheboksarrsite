@@ -1,138 +1,279 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito-VariableFont_wght';
-
+    font-family: 'Nunito-VariableFont_wght', sans-serif;
 }
+
 @font-face {
     font-family: 'Nunito-VariableFont_wght';
     src: url('/static/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
 }
-body,header,main,footer{
-    display: flex;
-    align-items: center;
-}
-body,header,main{
-    flex-direction: column;
-}
-body{
+
+body {
     min-height: 100vh;
-    background-color: rgb(201, 201, 201);
-}
-header{
-    gap: 14px;
-    padding: 10px 0px 10px 0px;
-}
-
-footer{
-    margin-top: auto;
-    gap: 10px;
-    
-}
-
-footer a{
-    color: rgb(95, 95, 95);
-}
-footer a:hover{
-    color: rgb(255, 255, 255);
-}
-.logo{
-    width: 220px;
-    height: 125px;
-}
-.Info-authorization{
-    width: 80vh;
-    padding-left: 40px;
-}
-.authorization{
-    width: 60vh;
+    background-color: #0f1117;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 20px 0px 20px 0px;
-    background-color: rgb(181, 181, 181);
+    padding: 2rem 1rem 3rem;
+    position: relative;
+    overflow-x: hidden;
 }
-.input-authorization{
-    width: 80%;
-    height: 30px;
-    border: 1px solid rgb(62, 61, 61);
+
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
 }
-.button-authorization{
-    width: 80%;
-    height: 30px;
-    background-color: rgb(103, 186, 106);
+
+.blob-1 {
+    width: 420px;
+    height: 420px;
+    background: #3ecf8e;
+    top: -100px;
+    left: -100px;
 }
-.button-authorization:hover{
-    background-color: rgb(255, 255, 255);
+
+.blob-2 {
+    width: 340px;
+    height: 340px;
+    background: #4f6ef7;
+    bottom: -80px;
+    right: -80px;
 }
-.button-authorization:active{
-    background-color: rgb(218, 218, 218);
-}
-.text-for-authorization, .error-message{
-    width: 80%;
-    margin-bottom: 10px;
-}
-.error-message{
-    color: rgb(243, 0, 0);
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0 20px;
+    position: relative;
+    z-index: 1;
     text-align: center;
-    font-size: 18px;
 }
 
-.google-ikon{
-    width: 40px;
-    height: 40px;
+.logo {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1) opacity(0.85);
 }
-@media (max-width: 768px){
-    .logo{
-        width: 200px;
-        height: 120px;
+
+.page-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.info-authorization {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.authorization {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 28px 28px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.input-authorization {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.input-authorization::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.input-authorization:focus {
+    border-color: #3ecf8e;
+    background: rgba(62, 207, 142, 0.07);
+}
+
+.text-for-authorization {
+    width: 100%;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.text-for-authorization a {
+    color: rgba(62, 207, 142, 0.8);
+    text-decoration: none;
+}
+
+.error-message {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+    border: 0.5px solid rgba(248, 113, 113, 0.25);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.button-authorization {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+.button-authorization:first-of-type {
+    background: #3ecf8e;
+    color: #0a2417;
+}
+
+.button-authorization:first-of-type:hover {
+    opacity: 0.88;
+}
+
+.button-authorization:not(:first-of-type) {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.button-authorization:not(:first-of-type):hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+}
+
+.button-authorization:active {
+    transform: scale(0.98);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 18px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 0.5px;
+    background: rgba(255, 255, 255, 0.12);
+    display: block;
+}
+
+.divider-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.btn-google:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.google-ikon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.error-message:empty {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 84px;
     }
-        .page-name{
-        font-size: 22px;
+
+    .page-name {
+        font-size: 20px;
     }
-    .Info-authorization{
+
+    .info-authorization {
+        font-size: 13px;
+        max-width: 320px;
+    }
+
+    main {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 72px;
+    }
+
+    .page-name {
         font-size: 18px;
-        width: 64vh;
-        padding-left: 10px;
-    }
-    .authorization{
-        width: 56vh;
-    }
-    .text-for-authorization{
-        font-size: 16px;
-    }
-    .google-ikon{
-        width: 50px;
-        height: 50px;
-    }
-    footer a{
-        font-size: 16px;
     }
 
-}
-@media (max-width: 480px){
-    .logo{
-        width: 180px;
-        height: 105px;
+    .info-authorization {
+        font-size: 13px;
+        max-width: 90vw;
     }
-    .page-name{
-        font-size: 21px;
+
+    main {
+        max-width: 95vw;
     }
-    .Info-authorization{
-        font-size: 17px;
-        width: 54vh;
-    }
-    .authorization{
-        width: 48vh;
-        margin-top: 30px;
-    }
-    .text-for-authorization{
-        font-size: 15px;
-    }
-    .google-ikon{
-        width: 40px;
-        height: 40px;
+
+    .authorization {
+        padding: 22px 18px 20px;
     }
 }
