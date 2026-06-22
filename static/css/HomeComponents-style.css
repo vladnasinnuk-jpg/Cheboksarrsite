@@ -1,0 +1,571 @@
+/* ── LOGO / NAME ── */
+.Name-and-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: 80px;
+}
+
+.page-name {
+    font-size: 20px;
+    color: var(--text);
+}
+
+/* ── FIND USER ── */
+.find-user-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.find-user-input {
+    width: 200px;
+    height: 34px;
+    background-color: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+.find-user-button,
+.filter-user-button {
+    width: 100px;
+    height: 34px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.find-user-button:hover,
+.filter-user-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.find-user-button:active,
+.filter-user-button:active {
+    background-color: var(--accent-active);
+}
+
+.filter-user-button:hover .find-window {
+    display: flex;
+}
+
+.find-window {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    z-index: 67;
+}
+
+.find-window>input {
+    width: 160px;
+    height: 30px;
+    background-color: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+.active {
+    display: flex;
+}
+
+/* ── USER INFO IN HEADER ── */
+.user-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-in-header {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+    border: 2px solid var(--border);
+}
+
+.name-in-header {
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* ── SETTINGS ── */
+.stettings-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.stettings-ikon {
+    width: 40px;
+    height: 40px;
+    filter: invert(1) brightness(.8);
+}
+
+.stettings-header:hover .stettings-window {
+    display: flex;
+}
+
+.stettings-window {
+    width: 160px;
+    height: 70px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    z-index: 67;
+    right: 0;
+    top: 44px;
+}
+
+.active-settings {
+    display: flex;
+}
+
+.stettings-theme {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.stettings-window>button {
+    width: 100px;
+    height: 30px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ── FOOTER ICONS ── */
+.footer-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-ikon {
+    width: 40px;
+    height: 40px;
+    filter: invert(1) brightness(.7);
+}
+
+/* ── CONTENT (пости) ── */
+.content {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.content-img {
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.post-topic {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.content-text {
+    font-size: 18px;
+    color: var(--text);
+}
+
+.content-publicated {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ── PROFILE ── */
+.profile {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    padding: 14px 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    border: 2px solid var(--border);
+}
+
+.profile-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-field>p {
+    font-size: 18px;
+    color: var(--text);
+}
+
+.profile-field>input {
+    width: 200px;
+    height: 30px;
+    background-color: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-buttons>button {
+    width: 100px;
+    height: 34px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.submit:hover {
+    background-color: var(--accent-hover);
+}
+
+.submit:active {
+    background-color: var(--accent-active);
+}
+
+.reject:hover {
+    background-color: var(--danger-hover);
+    cursor: pointer;
+}
+
+.reject:active {
+    background-color: var(--danger);
+}
+
+.write-user {
+    width: 100px;
+    height: 34px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.write-user:hover {
+    background-color: var(--accent-hover);
+}
+
+.write-user:active {
+    background-color: var(--accent-active);
+}
+
+/* ── DOCUMENTS ── */
+.All-documents {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.document-img {
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.document-description {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.document-uploaded {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* ── ALL USERS ── */
+.All-users {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.show-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.show-user:hover {
+    background-color: var(--bg-input);
+}
+
+.show-user:active {
+    background-color: var(--border);
+}
+
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 5%;
+    border: 1px solid var(--border);
+}
+
+.name-and-sername {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.name-and-sername>p {
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* ── CHAT ── */
+.curren-chat {
+    height: 500px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.messageS {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: var(--bg-surface);
+    gap: 14px;
+    padding: 10px;
+}
+
+.messageS>p {
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.message {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.my-message {
+    justify-content: flex-end;
+}
+
+.border {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.my-message .border {
+    background-color: #1e3a28;
+    border-color: var(--accent);
+}
+
+.message-text {
+    word-break: break-word;
+    font-size: 15px;
+}
+
+.message-time {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.wruper-message {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    padding: 6px;
+    gap: 6px;
+}
+
+.message-input {
+    width: 100%;
+    height: 36px;
+    background-color: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+.send-message {
+    width: 100px;
+    height: 36px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.send-message:hover {
+    background-color: var(--accent-hover);
+}
+
+.send-message:active {
+    background-color: var(--accent-active);
+}
+
+/* ── CHATS SIDEBAR ── */
+.chats_and_current-chat {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.Allchats {
+    width: 20vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: absolute;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 0;
+    left: 50vw;
+}
+
+.chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.chat:hover {
+    background-color: var(--bg-card);
+}
+
+.chat:active {
+    background-color: var(--border);
+}
+
+.avatar-in-chat {
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    border: 1px solid var(--border);
+}
+
+.user-name-and-sername {
+    display: flex;
+    flex-direction: row;
+    color: var(--text);
+}
