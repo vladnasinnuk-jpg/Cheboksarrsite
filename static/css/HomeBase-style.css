@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito-VariableFont_wght';
+}
+
+@font-face {
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+
+:root {
+    --bg: #131720;
+    --bg-surface: #1c2133;
+    --bg-card: #232b3e;
+    --bg-input: #2a3348;
+    --accent: #3ddc84;
+    --accent-hover: #57f59e;
+    --accent-active: #2fb96e;
+    --text: #e8eaf0;
+    --text-muted: #7a8499;
+    --border: #2e3a52;
+    --danger: #ff5f5f;
+    --danger-hover: #ff3a3a;
+}
+
+body,
+header,
+main,
+footer,
+nav {
+    display: flex;
+    align-items: center;
+}
+
+body,
+header,
+main {
+    flex-direction: column;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    min-width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 12px 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    min-width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+}
+
+nav>button {
+    width: 160px;
+    height: 34px;
+    background-color: var(--accent);
+    color: #0a0f1a;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+nav>button:hover {
+    background-color: var(--accent-hover);
+}
+
+nav>button:active {
+    background-color: var(--accent-active);
+}
+
+main {
+    width: 60vw;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 0;
+}
+
+footer {
+    margin-top: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 0;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    width: 100%;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color .15s;
+}
+
+footer>div>a:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+input:focus {
+    outline: 1px solid var(--accent);
+}

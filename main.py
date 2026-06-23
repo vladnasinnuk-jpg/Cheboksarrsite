@@ -273,8 +273,9 @@ def get_user():
         connection.close()
 @app.route("/get_users_with_parameters", methods=["POST"])
 def get_users_with_parameters():
-    data = request.get_json()["data"]
-    offset_users = request.get_json()["offset_users"]
+    body = request.get_json()
+    data = body["data"]
+    offset_users = body["offset_users"]
     sql = """
     SELECT
     	users.id,
@@ -320,14 +321,15 @@ def get_users_with_parameters():
     if conditions:
         sql += " WHERE "
         sql += " AND ".join(conditions)
-    sql += "LIMIT 100 OFFSET %s"
+    sql += " LIMIT 100 OFFSET %s"
+    values.append(offset_users)
     connection = get_connection()
     try:
         with connection.cursor() as cursor:
-            cursor.execute(sql, (values,offset_users))
-        return jsonify({
-            "userS": cursor.fetchall()
-        })
+            cursor.execute(sql, values)
+            return jsonify({
+                "userS": cursor.fetchall()
+            })
     finally:
         connection.close()
 @app.route("/get_chats", methods=["POST"])
